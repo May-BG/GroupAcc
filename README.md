@@ -1,9 +1,14 @@
 # GroupAcc
 
 ## Description
-
-## Getting Started
-
+The GroupAcc includes two pooling-based phylogenetic approaches with improved statistical power to infer weakly accelerated evolution. The key idea of GroupAcc is to group TFBSs by the bound transcription factor and then examine whether each TFBS group as a whole shows an elevated substitution rate in a lineage of interest.
+## Requirements
+The GroupAcc is implemented in R with several packages.
+### Input files
+X.zip: a zip directory composed of alignments of specific group of genetic elements
+tfbs_ref_pml.RData: a reference phylogenetic model file in the format of RData
+tfbs_n1_nogap.nh: a reference phylogenetic tree containing the topology
+hg19: the lineage of interest
 ### GroupLRT
 ```$ Rscript groupLRT_1221.R ${h}.zip tfbs_ref_pml.RData tfbs_n1_nogap.nh hg19 $f > ${f}/hg19.txt```
 
@@ -13,7 +18,3 @@
 ## Help
 
 ## Authors
-
-## Version History
-
-## Acknowledgments
