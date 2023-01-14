@@ -16,10 +16,17 @@ tfbs_n1_nogap.nh: a reference phylogenetic tree containing the topology
 hg19: the lineage of interest
 
 ### GroupLRT
-```$ Rscript groupLRT_1221.R ${h}.zip tfbs_ref_pml.RData tfbs_n1_nogap.nh hg19 $f > ${f}/hg19.txt```
-
+``` Rscript groupLRT_1221.R ${h}.zip tfbs_ref_pml.RData tfbs_n1_nogap.nh hg19 $f > ${f}/hg19.txt```
+```
+mkdir groupLRT_output/
+Rscript groupLRT.R ZZZ3.zip tfbs_ref_pml.RData tfbs_n1_nogap.nh hg19 groupLRT_output/ > groupLRT_output/hg19_groupLRT.txt
+```
 ### Mixture Model
 ```$ Rscript mixSingle_1221.R BDP1 tfbs_ref_pml.RData tfbs_n1_nogap.nh hg19,panTro2 ${f}/panTro2 > ${f}/panTro2/mixSingle.txt```
+```
+mkdir mixSingle_output/
+Rscript mixSingle.R POU5F1/ tfbs_ref_pml.RData tfbs_n1_nogap.nh hg19,panTro2 mixSingle_output/ > mixSingle_output/mixSingle.txt
+```
 
 ## Help
 
